@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<!-- <meta charset="ISO-8859-1">  -->
+<meta charset="ISO-8859-1">
+<title>MOVIE DRIVE || PELICULAS || INFORMACIÓN</title>
+<link th:href="@{/css/header.css}" rel="stylesheet">
+<link th:href="@{/css/estilosFuncion.css}" rel="stylesheet">
+<link th:href="@{/css/footer.css}" rel="stylesheet">
+
+<!-- ICONOS -->
+<script src="https://kit.fontawesome.com/812c8ee19a.js"
+	crossorigin="anonymous"></script>
+<!-- FUENTES -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Teko:wght@400;600&display=swap"
+	rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
+<link th:href="@{/bootstrap/css/sticky-footer-navbar.css}"
+	rel="stylesheet">
+<!-- LIBRERIA JQUERY DEL MENU -->
+<script th:src="@{/js/jquery.js}"></script>
+<!-- FIN DE LIBRERIA JQUERY -->
+</head>
+<body>
+  <!-- INICIO HEADER -->
+  <header th:insert="fragments/menu :: menu-principal">
+    </header>
+  <!-- FIN HEADER -->
+	<br><br>
+	<main role="main">
+		<hr>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<img class="rounded mx-auto d-block"
+						th:src="@{/images/{img} (img=${pelicula.imagen})}"
+						alt="Generic placeholder image" width="280px" height="490px">
+				</div>
+				<div class="col-md-9">
+					<div class="card">
+						<h4 class="card-header">
+							<strong th:text="${pelicula.NOMBRE}"></strong>
+						</h4>
+						<div class="card-body">
+							<h5 class="card-title">
+								<strong>Nº FUNCIÓN: </strong> <span th:text="${pelicula.ID_FUNCION}">Nombre
+									la categoría</span>
+							</h5>
+							<h6 class="card-title">
+								<strong>CATEGORÍA: </strong> <span th:text="${pelicula.ID_CAT}">
+								</span>
+							</h6>
+							<h6 class="card-title">
+								<strong>FECHA DE PUBLICACIÓN: </strong><span th:text="${pelicula.FECHA_PUBLICACION}">$9000</span>
+							</h6>
+							<p class="card-text" th:text="${pelicula.DESCRIPCION}"></p>
+							<br> <a class="btn btn-primary" th:href="@{/peliculas/peliculasTabla.html}" role="button"
+								title="Quiero aplicar para esta oferta de trabajo."><i
+								class="fas fa-file" aria-hidden="true"></i> Tabla Peliculas</a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</main>
+	<!-- INICIO FOOTER -->
+	<footer th:insert="fragments/footer :: pie-pagina" class="footer">
+	</footer>
+	<!-- FIN FOOTER -->
+	<!-- LIBRERIAS PARA EL MENÚ -->
+	<script th:src="@{/js/headroom.min.js}"></script>
+	<script th:src="@{/js/menu-flex.js}"></script>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<meta charset="UTF-8">
+<!-- <meta charset="ISO-8859-1">  -->
+<title>MOVIE DRIVE || FUNCIONES</title>
+<link th:href="@{/css/header.css}" rel="stylesheet">
+<link th:href="@{/css/footer.css}" rel="stylesheet">
+<link th:href="@{/css/estilosFuncion.css}" rel="stylesheet">
+
+<link rel="icon" href="favicon.ico">
+<!-- ICONOS -->
+<script src="https://kit.fontawesome.com/812c8ee19a.js"
+	crossorigin="anonymous"></script>
+<!-- FUENTES -->
+<link
+	href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Teko:wght@400;600&display=swap"
+	rel="stylesheet">
+<!-- Bootstrap core CSS -->
+<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
+<link th:href="@{/bootstrap/css/sticky-footer-navbar.css}"
+	rel="stylesheet">
+<!-- LIBRERIA JQUERY DEL MENU -->
+<script th:src="@{/js/jquery.js}"></script>
+<!-- FIN DE LIBRERIA JQUERY -->
+</head>
+<body>
+	<!-- INICIO HEADER -->
+  <!-- INICIO HEADER -->
+  <header th:insert="fragments/menu :: menu-principal">
+    </header>
+  <!-- FIN HEADER -->
+	<!-- FIN HEADER -->
+	<h1 class="titulo_funcion">-FUNCIONES-</h1>
+	<h2 class="subtitulo_funcion">Nuestras funciones</h2>
+	<br>
+	<center>
+		<div th:each="funciones : ${funciones}"
+			class="row row-cols-1 row-cols-md-3 g-4 container">
+			<div class="col">
+				<div class="card_funciones">
+					<img th:src="@{/images/{img} (img=${funciones.imagen})}"
+						class="card-img-top" alt="...">
+					<div class="card-body">
+						<h3 th:text="${funciones.NOMBRE_PELICULA}" class="card-title"></h3>
+						<p class="card-text">
+							<strong>Nº DE FUNCIÓN: </strong><span
+								th:text="${funciones.ID_SALA}"></span>
+						</p>
+						<p class="card-text">
+							<strong>Nº DE SEDE: </strong><span th:text="${funciones.ID_SEDE}"></span>
+						</p>
+						<p class="card-text">
+							<strong>FECHA: </strong><span th:text="${funciones.FECHA}"></span>
+						</p>
+						<p class="boton">
+							<a class="btn btn-secondary"
+								th:href="@{/funciones/view/{ID_FUNCION} (ID_FUNCION=${funciones.ID_FUNCION}) }"
+								role="button"><i class="fa-solid fa-circle-info"></i> Más
+								información </a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<div class="col">
+				<div class="card_funciones">
+					<img th:src="@{/images/{img} (img=${funciones.imagen})}"
+						class="card-img-top" alt="...">
+					<div class="card-body">
+						<h3 th:text="${funciones.NOMBRE_PELICULA}" class="card-title"></h3>
+						<p class="card-text">
+							<strong>Nº DE FUNCIÓN: </strong><span
+								th:text="${funciones.ID_SALA}"></span>
+						</p>
+						<p class="card-text">
+							<strong>Nº DE SEDE: </strong><span th:text="${funciones.ID_SEDE}"></span>
+						</p>
+						<p class="card-text">
+							<strong>FECHA: </strong><span th:text="${funciones.FECHA}"></span>
+						</p>
+						<p class="boton">
+							<a class="btn btn-secondary"
+								th:href="@{/funciones/view/{ID_FUNCION} (ID_FUNCION=${funciones.ID_FUNCION}) }"
+								role="button"><i class="fa-solid fa-circle-info"></i> Más
+								información </a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card_funciones">
+					<img th:src="@{/images/{img} (img=${funciones.imagen})}"
+						class="card-img-top" alt="...">
+					<div class="card-body">
+						<h3 th:text="${funciones.NOMBRE_PELICULA}" class="card-title"></h3>
+						<p class="card-text">
+							<strong>Nº DE FUNCIÓN: </strong><span
+								th:text="${funciones.ID_SALA}"></span>
+						</p>
+						<p class="card-text">
+							<strong>Nº DE SEDE: </strong><span th:text="${funciones.ID_SEDE}"></span>
+						</p>
+						<p class="card-text">
+							<strong>FECHA: </strong><span th:text="${funciones.FECHA}"></span>
+						</p>
+						<p class="boton">
+							<a class="btn btn-secondary"
+								th:href="@{/funciones/view/{ID_FUNCION} (ID_FUNCION=${funciones.ID_FUNCION}) }"
+								role="button"><i class="fa-solid fa-circle-info"></i> Más
+								información </a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="col">
+				<div class="card_funciones">
+					<img th:src="@{/images/{img} (img=${funciones.imagen})}"
+						class="card-img-top" alt="...">
+					<div class="card-body">
+						<h3 th:text="${funciones.NOMBRE_PELICULA}" class="card-title"></h3>
+						<p class="card-text">
+							<strong>Nº DE SALA: </strong><span
+								th:text="${funciones.ID_SALA}"></span>
+						</p>
+						<p class="card-text">
+							<strong>Nº DE SEDE: </strong><span th:text="${funciones.ID_SEDE}"></span>
+						</p>
+						<p class="card-text">
+							<strong>FECHA: </strong><span th:text="${funciones.FECHA}"></span>
+						</p>
+						<p class="boton">
+							<a class="btn btn-secondary"
+								th:href="@{/funciones/view/{ID_FUNCION} (ID_FUNCION=${funciones.ID_FUNCION}) }"
+								role="button"><i class="fa-solid fa-circle-info"></i> Más
+								información </a>
+						</p>
+					</div>
+				</div> 
+			</div>
+		</div>
+	</center>
+	<!-- INICIO FOOTER -->
+	<footer th:insert="fragments/footer :: pie-pagina" class="footer">
+	</footer>
+	<!-- FIN FOOTER -->
+	<!-- FIN FOOTER -->
+	<!-- LIBRERIAS PARA EL MENÚ -->
+	<script th:src="@{/js/headroom.min.js}"></script>
+	<script th:src="@{/js/menu-flex.js}"></script>
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+
+</body>
+
+</html>

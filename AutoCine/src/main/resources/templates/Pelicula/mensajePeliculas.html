@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta charset="ISO-8859-1">-->
+<title>MOVIE DRIVE || FUNCIONES || MENSAJE</title>
+<link th:href="@{/css/header.css}" rel="stylesheet">
+<link th:href="@{/css/estilosFuncion.css}" rel="stylesheet">
+<link th:href="@{/css/footer.css}" rel="stylesheet">
+
+<link rel="icon" href="favicon.ico">
+<!-- ICONOS -->
+<script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
+<!-- Bootstrap core CSS -->
+<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
+<!-- Custom styles for this template -->
+<link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
+<link th:href="@{/bootstrap/css/sticky-footer-navbar.css}"
+rel="stylesheet">
+<!-- FUENTES -->       
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&family=Teko:wght@400;600&display=swap"
+rel="stylesheet">          
+</head> 
+<body>
+  <!-- INICIO HEADER -->
+  <header th:insert="fragments/menu :: menu-principal">
+    </header>
+  <!-- FIN HEADER -->
+      <h1 class="mensajeFuncion">Película Borrada con id [[${ID_PELICULA}]] eliminada</h1>
+  
+	 	<!-- INICIO FOOTER -->
+	<footer th:insert="fragments/footer :: pie-pagina" class="footer">
+	</footer>
+	<!-- FIN FOOTER -->
+  <!-- LIBRERIAS PARA EL MENÚ -->
+  <script th:src="@{/js/headroom.min.js}"></script>
+  <script th:src="@{/js/menu-flex.js}"></script>
+		<!-- Bootstrap core JavaScript
+    ================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+	
+</body>
+</html>
